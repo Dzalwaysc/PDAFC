@@ -1,38 +1,20 @@
 %% 性能指标计算，把误差累加
-% len = size(Tao{4},1);
-% Theorem1_IAE{4}(1) = 0; Theorem1_IAE{5}(1) = 0;
-% Theorem1_IAE{6}(1) = 0; Theorem1_IAE{7}(1) = 0;
-% Theorem1_IAE_dif{4}(1) = 0; Theorem1_IAE_dif{5}(1) = 0;
-% Theorem1_IAE_dif{6}(1) = 0; Theorem1_IAE_dif{7}(1) = 0;
-% for i=2:len-1
-%     Theorem1_IAE{4}(i) = Theorem1_IAE{4}(i-1) + norm(Tao{4}(i,:));
-%     Theorem1_IAE{5}(i) = Theorem1_IAE{5}(i-1) + norm(Tao{5}(i,:));
-%     Theorem1_IAE{6}(i) = Theorem1_IAE{6}(i-1) + norm(Tao{6}(i,:));
-%     Theorem1_IAE{7}(i) = Theorem1_IAE{7}(i-1) + norm(Tao{7}(i,:));
-%     
-%     Theorem1_IAE_dif{4}(i) = Theorem1_IAE_dif{4}(i-1) + norm(Tao_dif{4}(i,:));
-%     Theorem1_IAE_dif{5}(i) = Theorem1_IAE_dif{5}(i-1) + norm(Tao_dif{5}(i,:));
-%     Theorem1_IAE_dif{6}(i) = Theorem1_IAE_dif{6}(i-1) + norm(Tao_dif{6}(i,:));
-%     Theorem1_IAE_dif{7}(i) = Theorem1_IAE_dif{7}(i-1) + norm(Tao_dif{7}(i,:));
-% end
-% figure(4);
-% plot(tr(2:end), Theorem1_IAE{4}, '-', 'LineWidth', 2, 'Color', [0 0.4470 0.7410]);
-% hold on
-% plot(tr(2:end), Theorem1_IAE{5}, '-', 'LineWidth', 2, 'Color', [0.9290 0.6940 0.1250]);
-% hold on
-% plot(tr(2:end), Theorem1_IAE{6}, '-', 'LineWidth', 2, 'Color', [0.4940 0.1840 0.5560]);
-% hold on
-% plot(tr(2:end), Theorem1_IAE{7}, '-', 'LineWidth', 2, 'Color', [0.3010 0.7450 0.9330]);
-% hold on
-% 
-% plot(tr(2:end), Theorem1_IAE_dif{4}, '--', 'LineWidth', 2, 'Color', [0 0.4470 0.7410]);
-% hold on
-% plot(tr(2:end), Theorem1_IAE_dif{5}, '--', 'LineWidth', 2, 'Color', [0.9290 0.6940 0.1250]);
-% hold on
-% plot(tr(2:end), Theorem1_IAE_dif{6}, '--', 'LineWidth', 2, 'Color', [0.4940 0.1840 0.5560]);
-% hold on
-% plot(tr(2:end), Theorem1_IAE_dif{7}, '--', 'LineWidth', 2, 'Color', [0.3010 0.7450 0.9330]);
-% hold on
+len = size(Tao{4},1);
+Theorem1_IAE{4}(1) = 0; Theorem1_IAE{5}(1) = 0;
+Theorem1_IAE{6}(1) = 0; Theorem1_IAE{7}(1) = 0;
+Theorem1_IAE_dif{4}(1) = 0; Theorem1_IAE_dif{5}(1) = 0;
+Theorem1_IAE_dif{6}(1) = 0; Theorem1_IAE_dif{7}(1) = 0;
+for i=2:len-1
+    Theorem1_IAE{4}(i) = Theorem1_IAE{4}(i-1) + norm(Tao{4}(i,:));
+    Theorem1_IAE{5}(i) = Theorem1_IAE{5}(i-1) + norm(Tao{5}(i,:));
+    Theorem1_IAE{6}(i) = Theorem1_IAE{6}(i-1) + norm(Tao{6}(i,:));
+    Theorem1_IAE{7}(i) = Theorem1_IAE{7}(i-1) + norm(Tao{7}(i,:));
+    
+    Theorem1_IAE_dif{4}(i) = Theorem1_IAE_dif{4}(i-1) + norm(Tao_dif{4}(i,:));
+    Theorem1_IAE_dif{5}(i) = Theorem1_IAE_dif{5}(i-1) + norm(Tao_dif{5}(i,:));
+    Theorem1_IAE_dif{6}(i) = Theorem1_IAE_dif{6}(i-1) + norm(Tao_dif{6}(i,:));
+    Theorem1_IAE_dif{7}(i) = Theorem1_IAE_dif{7}(i-1) + norm(Tao_dif{7}(i,:));
+end
 
 
 figure(4);
